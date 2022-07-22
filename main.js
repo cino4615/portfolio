@@ -51,6 +51,21 @@ arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
 });
 
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null) {
+        return;
+    }
+    projects.forEach((project) => {
+        
+    });
+
+    console.log(filter);
+});
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
